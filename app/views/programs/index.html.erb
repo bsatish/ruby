@@ -1,0 +1,126 @@
+<% provide(:title, "Programs") %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-offset-3 col-md-6">
+        <h4>We found <span class="text-success"><%= @programs.total_entries %></span> Program(s) for you</h4>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "Clear Filters", programs_path, :class => "navbar-right" %>
+      </div>
+    </div>
+  </div>
+  <div class="row row-offcanvas row-offcanvas-left">
+    
+    <!-- Sidebar Filters -->
+    <div class="col-md-3 col-sm-6 sidebar-offcanvas" id="sidebar" role="navigation"> 
+      
+      <div class="panel panel-default">
+      <div class="panel-body">
+        <%= form_tag(programs_path, method: "get") do %>
+        <%= submit_tag "Apply Filters", :name => nil, :class => "btn btn-default col-md-12", :utf8 => nil %>
+        <div class="col-md-12"><hr></div>
+        <%= text_field_tag :keyword, params[:keyword], :class => 'form-control', :placeholder => 'Search Program Name' %>
+        <hr>
+        <div class="checkbox col-md-12">
+        <%= check_box_tag :accepting_apps, params[:accepting_apps] %>
+        <%= label_tag(:accepting_apps, "Accepting Applications Only") %>
+        </div>
+        <div class="col-md-12"><hr></div>
+        <h5>Age</h5>
+        <%= number_field_tag :age, params[:age], :class => "form-control col-md-12", :placeholder => "Age" %>
+        <div class="col-md-12"><hr></div>
+        
+        <h5>Program Offerings</h5>
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :hsd, params[:hsd] %>
+          <%= label_tag(:hsd, "High School Diploma or Equivalent") %>
+        </div>
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :career, params[:career] %>
+          <%= label_tag(:career, "Career Training") %>
+        </div>
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :esol, params[:esol] %>
+          <%= label_tag(:esol, "English Classes") %>
+        </div>
+        <h5><a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        More Options <span class="caret"></span>
+        </a></h5>
+        <div class="collapse" id="collapseExample">
+        
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :night, params[:night] %>
+          <%= label_tag(:night, "Night Classes") %>
+        </div>
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :child, params[:child] %>
+          <%= label_tag(:child, "Childcare Provided") %>
+        </div>
+        <div class="checkbox col-md-12">
+          <%= check_box_tag :housing, params[:housing] %>
+          <%= label_tag(:housing, "Housing Provided") %>
+        </div>
+        
+        </div>
+        
+        <% end %>
+      </div>
+      </div> <!-- End of Panel Body -->      
+    </div> <!-- End of Sidebar Filters -->
+    
+    <!-- Programs Results Table -->
+    <div class="col-md-9">
+      <div class="col-md-12 col-sm-12">
+      <button type="button" class="btn btn-default btn-fill btn-round visible-xs visible-sm" data-toggle="offcanvas" data-target=".sidbar-nav">Filters</button>
+      </div>
+      
+      <% if @programs.count == 0 %>
+      <div class="row">
+      <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body text-center">
+          <h4>Sorry. No Results :(</h4>
+        </div>
+      </div>
+      </div>
+      </div>
+      <% end %>
+      
+      <div class="row">
+      <div class="col-md-12">
+      
+          <div class="list-group">
+            <% @programs.each do |program| %>
+            <%= link_to program, :class => "list-group-item" do %>
+            
+              <h4 class="list-group-item-heading"><%= program.program_name %></h4>
+              <p><span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accepting Applications</span></p>
+              <div class="list-group-item-text">
+              <p></p><%= program.program_description.truncate(200) %></p>
+              <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> <%= program.address %></br>
+              <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <%= program.phone_number %></p>
+              </div>
+              
+            
+            <% end %>
+            <% end %>
+          </div>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <%= will_paginate @programs, renderer: BootstrapPagination::Rails %>
+        </div>
+      </div>
+      </div>
+
+        
+      </div> <!-- End of Main Section -->
+    </div>
+  </div>
+</div>
+</div>

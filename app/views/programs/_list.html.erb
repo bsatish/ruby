@@ -1,0 +1,11 @@
+<table class="table">
+  <tbody>
+    <% @programs.each do |program| %>
+    <tr>
+      <td><%= program.program_name %></td>
+      <td><%= program.program_description %></td>
+      <td><%= link_to "More Details", program %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,34 @@
+<% provide(:title, "Home") %>
+
+<div class="container-fluid home-hero">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 home-hero-textbox">
+        <h1>Let's help you get back on track.</h1>
+        <h3>The District of Columbia ReEngagement Center serves District youth (ages 16 - 24) who have dropped out but want to obtain a high school diploma or GED.</h3>
+        <div class="btn btn-lg btn-info" data-toggle="modal" data-target="#videoModal"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch Video</div>
+        <button class="btn btn-lg btn-info btn-fill" href="/programs"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Programs</button>
+      </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <br>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/148636997?color=ffffff&title=0&byline=0&portrait=0" min-height="80%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="text-center">
+              <h5><button type="button" href="/programs" class="btn btn-danger btn-fill">Find A Program Now</button></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

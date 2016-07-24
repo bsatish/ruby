@@ -1,0 +1,154 @@
+<% provide(:title, @program.program_name) %>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> / <%= link_to "Programs", programs_path %> / <%= @program.program_name %></p>    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8">
+      <div class="panel panel-default">
+      <div class="panel-body">
+        <h3><%= @program.program_name %></h3>
+        <hr>
+        <h5><span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accepting Applications</h5>
+        <p>Application Deadline: </p>
+        </br>
+        <%= @program.program_description %>
+        <hr>
+        <div class="col-md-3">
+          <h5>Requirements</h5>
+        </div>
+        <div class="col-md-9">
+          
+          <ul>
+            <% if @program.req_dc_resident = TRUE %>
+            <li>Live in Washington, DC</li>
+            <% end %>
+            <li>Between <%= @program.min_age %> and <%= @program.max_age %> Years Old</li>
+            <% if @program.req_drug_test = TRUE %>
+            <li>Drug Testing</li>
+            <% end %>
+            <% if @program.req_vaccination = TRUE %>
+            <li>Vaccinations</li>
+            <% end %>
+          </ul>
+         
+        </div>
+        <div class="col-md-12"><hr></div>
+        <div class="col-md-3">
+          <h5>Credentials</h5>
+        </div>
+        <div class="col-md-9">
+          <p>
+          <ul>
+            <li>National External Diploma Program (NEDP)</li>
+            <li>GED (General Educational Development)</li>
+            <li>High School Diploma</li>
+            <li>Serv Safe</li>
+            <li>Digital Literacy Certificate IC3</li>
+          </ul>
+          </p>
+        </div>
+        <div class="col-md-12"><hr></div>
+        <div class="col-md-3">
+          <h5>Program Details</h5>
+        </div>
+        <div class="col-md-9">
+          <p>Program Hours: <%= @program.program_start_time %>-<%= @program.program_end_time %></p>
+          <ul>
+            <li>English Basic Education (Math and Reading)</li>
+            <li>Bilingual Instruction</li>
+            <li>English as a Second Language</li>
+            <li>Computer Literacy</li>
+            <li>College Preparation</li>
+            <li>Vocational/Career Training</li>
+            <li>Barbering Classes</li>
+            <li>Food Service Classes</li>
+            <li>Cosmetology Classes</li>
+            <li>Computer/Information Technology Classes</li>
+            <li>Technician Classes (HVAC)</li>
+            <li>Medical Services Classes</li>
+            <li>Construction Training</li>
+            <li>Workforce Readiness Classes</li>
+          </ul>
+        </div>
+        <div class="col-md-12"><hr></div>
+        <div class="col-md-3">
+          <h5>Additional Supports and Services</h5>
+        </div>
+        <div class="col-md-9">
+          <h5>
+            <span class="label label-info">Project Based Learning</span>
+            <span class="label label-info">Dual College Enrollment</span>
+            <span class="label label-info">Online Courses</span>
+            <span class="label label-info">Internships/On Job Training</span>
+            <span class="label label-info">Night Classes Offered</span>
+            <span class="label label-info">Childcare</span>
+            <span class="label label-info">Childcare Subsidy</span>
+            <span class="label label-info">Parenting Support</span>
+            <span class="label label-info">Community Outreach</span>
+            <span class="label label-info">Independent Living</span>
+            <span class="label label-info">Housing/Emergency Shelter</span>
+            <span class="label label-info">Case Management</span>
+            <span class="label label-info">Referrals Provided</span>
+            <span class="label label-info">Transportation Subsidy</span>
+            <span class="label label-info">Student Stipend</span>
+            <span class="label label-info">On-site Accomodations</span>
+            <span class="label label-info">Health Counseling</span>
+            <span class="label label-info">Spanish Instruction</span>
+            <span class="label label-info">Mental Health Services</span>
+            <span class="label label-info">Food Provided</span>
+            <span class="label label-info">Alumni Support</span>
+            <span class="label label-info">Special Education Capable</span>
+          </h5>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="col-md-4"> <!-- Side Program Info Panel -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Program Information</h3>
+      </div>
+      <div class="panel-body">
+        <div class="map-container"><div id="map"></div></div>
+        
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Address: <%= @program.address %></p>
+        <p><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Building Hours: <%= @program.building_open_time %>-<%= @program.building_close_time %></p>
+        <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Phone Number: <%= @program.phone_number %></p>
+        <p><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Visit Website: <%= link_to @program.website_url, @program.website_url %></p>
+        <button type="button" class="btn btn-info btn-round col-md-12 col-sm-12" data-toggle="modal" data-target="#myModal">Interested in Enrolling?</button>
+      </div>
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+
+<script>
+var map;
+function initMap() {
+  var myLatLng = {lat: <%= @program.address_latitude %>, lng: <%= @program.address_longitude %>};
+        
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+  
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: '<%= @program.program_name %>'
+  });
+};
+
+marker.setMap(map);
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpTc_dX23-YA81gEEceAPRNlf2VLQi6BI&callback=initMap" async defer></script>

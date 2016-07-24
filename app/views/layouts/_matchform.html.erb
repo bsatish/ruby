@@ -1,0 +1,7 @@
+<!-- Match Form (placed within modal) -->
+<% form_tag programs_match_path, :method => 'get' do %>
+  <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Update Results", :name => nil, :class => 'btn btn-primary' %>
+  </p>
+<% end %>

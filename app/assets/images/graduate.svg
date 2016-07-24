@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="86px" height="87px" viewBox="0 0 86 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>graduate</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-842.000000, -424.000000)">
+            <g id="graduate" sketch:type="MSLayerGroup" transform="translate(815.000000, 401.000000)">
+                <circle id="Oval-3" sketch:type="MSShapeGroup" cx="70" cy="70" r="70"></circle>
+                <path d="M112.082,109.376 L28,109.376 C28,95.306 40.226,83.388 57.12,79.286 C60.402,81.609 64.183,82.956 68.222,82.956 C72.598,82.956 76.67,81.377 80.133,78.682 C98.475,82.081 112.082,94.531 112.082,109.376 L112.082,109.376 Z M48.784,59.459 C48.784,71.739 57.49,81.694 68.232,81.694 C78.973,81.694 87.679,71.739 87.679,59.459 C87.679,55.318 86.671,51.455 84.945,48.135 L51.518,48.135 C49.792,51.455 48.784,55.318 48.784,59.459 L48.784,59.459 Z M43.058,49.914 L44.884,49.914 L44.884,41.346 L51.588,44.938 L51.621,47.286 L84.827,47.286 L84.571,43.279 L103.689,33.744 L65.984,24 L30.411,34.779 L43.058,40.859 L43.058,49.914 L43.058,49.914 Z M46.627,65.61 C47.747,64.495 46.627,60.43 46.627,60.43 L44.668,50.699 L43.199,51.075 L43.277,51.292 C43.597,51.723 43.661,57.282 43.661,57.282 C43.884,58.397 43.157,65.609 43.157,65.609 C45.453,66.869 46.627,65.61 46.627,65.61 L46.627,65.61 Z" id="Shape" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,219 @@
+<% provide(:title, "About Us") %>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "RECstudents.png" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Student Testimonial</h1>
+              <p><a class="btn btn-lg btn-fill btn-info" data-toggle="modal" data-target="#videoModal1"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch Video</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "CovenantHouse.png" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Covenant House Program Partner</h1>
+              <p><a class="btn btn-lg btn-fill btn-info" data-toggle="modal" data-target="#videoModal2"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch Video</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "BallouSTAY.png" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Ballou STAY Program Partner</h1>
+              <p><a class="btn btn-lg btn-fill btn-info" data-toggle="modal" data-target="#videoModal3"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch Video</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="nav-tabs-navigation">
+    <div class="nav-tabs-wrapper">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#purpose" data-toggle="tab">Our Purpose</a></li>
+        <li><a href="#whatwedo" data-toggle="tab">What We Do</a></li>
+        <li><a href="#howitworks" data-toggle="tab">How It Works</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    <div id="my-tab-content" class="tab-content">
+      <div class="tab-pane active" id="purpose">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <h2>Our Purpose</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <p>As with many other major US cities, DC faces a crisis of connection for youth and young adults. There are currently at least 7,493 youth (ages 16-24) residing in the District of Columbia who are not enrolled in school or other educational programs and who do not have a high school diploma or credential.</p>
+            <p>As the District continues its efforts to ensure that all students within its pre-K-12 system receive a quality education, it is critical that students who have dropped out also have solid on-ramps to reconnect back to education options that will prepare them for successful adulthood. In response to this need, the District established a ReEngagement Center to serve as a “single-door” through which youth (ages 16-24) who have dropped out can reconnect back to educational options and other critical services to support their attainment of a high school diploma or GED. The Office of the State Superintendent of Education is spearheading this effort with strong support from the Office of the Deputy Mayor for Education, the Department of Employment Services, other key partner agencies, Raise DC’s Disconnected Youth Change Network, schools, and community-based organizations.</p>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div class="tab-pane" id="whatwedo">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <h2>What We Do</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <p>We offer a range of services to 16-24 year olds including:</p>
+          <ul>
+            <li>Assessment of academic and non-academic needs to develop individualized reengagement plans</li>
+            <li>Assistance identifying best fit educational options, including District of Columbia Public Schools, public charter schools, community based organizations, and faith based organizations</li>
+            <li>Support during the re-enrollment process (collecting documents, accompanying youth on program visits, and connecting youth to resources that address circumstances that led to them leaving school)</li>
+            <li>Ongoing support for at least one year after enrollment occur</li>
+          </ul>
+    
+          <p>Who is Eligible</p>
+          <ul>
+            <li>Age: 16 – 24 years old</li>
+            <li>Residence: DC Resident or Ward of DC</li>
+            <li>Education: No high school diploma or GED and not currently enrolled in school</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="tab-pane" id="howitworks">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">How It Works</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h4>Come In</h4>
+          <%= image_tag("enter.svg") %>
+          <p>Walk in or call us at 202.671.2539 to make an appointment. We’re open Monday – Friday from 9AM – 5PM.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>Meet With Us</h4>
+          <%= image_tag("conversation.svg") %>
+          <p>Meet with one of our ReEngagement Specialists so we can talk about the supports you need to get back on track!</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>Connect With Programs</h4>
+          <%= image_tag("graduate.svg") %>
+          <p>We work with District of Columbia Public Schools, public charter schools, community based organizations, and faith based organizations to help you identify a best fit educational option.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"><hr></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Come Visit Us. <div class="text-muted">We're open Monday - Friday from 9 AM to 5 PM.</div></h2>
+      <p><strong>Address:</strong></br>
+      4058 Minnesota Ave NE, 2nd Floor</br>
+      Washington, DC 20019</p>
+      <p><strong>Phone Number:</strong></br>
+      (202) 671-2539</p>
+      <p><strong>Email:</strong></br>
+      backontrack@dc.gov</p>
+    </div>
+    <div class="col-md-6 center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12421.128771599779!2d-76.94804530273622!3d38.89466172621855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b893506cc033%3A0xf91a53dc3a033d6a!2s4058+Minnesota+Ave+NE%2C+Washington%2C+DC+20019!5e0!3m2!1sen!2sus!4v1456035463390" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <p class="text-center">Special thanks to The Next Step Public Charter School for the design and development of this site.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Carousel Video 1 -->
+    <div class="modal fade" id="videoModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <br>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/153150874?color=ffffff&title=0&byline=0&portrait=0" min-height="80%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Carousel Video 2 -->
+    <div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <br>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/160801029?color=ffffff&title=0&byline=0&portrait=0" min-height="80%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Carousel Video 3 -->
+    <div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <br>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/160801982?color=ffffff&title=0&byline=0&portrait=0" min-height="80%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

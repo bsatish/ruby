@@ -1,0 +1,24 @@
+<% provide(:title, "Your Matches") %>
+
+<div class="container">
+<div class="row">
+<h1>Check Out These Programs!</h1>
+<p>Based on your answers, here are a few programs that might be a good fit.</p>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @matches.each do |program| %>
+    <div class="marketing col-lg-4">
+      <p><%= program.program_name %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= link_to 'See More', programs_path %>
+  </div>
+</div>
